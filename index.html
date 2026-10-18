@@ -375,7 +375,7 @@ footer.x-f{max-width:1180px;margin:0 auto;padding:0 16px 40px;color:#8A8C78;font
     if (!r || !SRC[r.name]) { showGallery(); return; }
     var props = defaults(r.name, r.props);
     if (cur && cur.name === r.name && rootInst) {
-      document.title = titleOf(r.name) + ' — شهادات إتحاف';
+      document.title = titleOf(r.name) + ' — إتحاف';
       rootInst.setProps(props); renderTweaks(r.name, props); queue(); return;
     }
     if (rootInst) rootInst.unmount();
@@ -389,7 +389,7 @@ footer.x-f{max-width:1180px;margin:0 auto;padding:0 16px 40px;color:#8A8C78;font
     cur.w = w; cur.h = h; cur.fluid = b.expand === 'fill';
     document.getElementById('vtitle').textContent = titleOf(r.name);
     document.getElementById('vpage').textContent = pageName(b.page) + ' · ' + w + '×' + h;
-    document.title = titleOf(r.name) + ' — شهادات إتحاف';
+    document.title = titleOf(r.name) + ' — إتحاف';
     var list = ordered(); var i = list.indexOf(r.name);
     document.getElementById('prev').onclick = function () { location.hash = '#/' + list[(i - 1 + list.length) % list.length]; };
     document.getElementById('next').onclick = function () { location.hash = '#/' + list[(i + 1) % list.length]; };
